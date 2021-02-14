@@ -27,23 +27,9 @@ export class SidebarComponent extends ComponentParent implements OnInit {
     },
     {
       id: 'rewards',
+      link: '/rewards',
       text: 'rewards',
       icon: 'gift',
-      children: [
-        {
-          id: 'mergeConfig',
-          link: '/merge-config',
-          text: 'Merge Config',
-          icon: 'merge',
-
-        },
-        {
-          id: 'kubernetesAccess',
-          link: '/kubernetes-access',
-          text: 'Access',
-          icon: 'access',
-        },
-      ],
     },
     {
       id: 'Friends',
