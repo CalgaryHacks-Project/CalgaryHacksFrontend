@@ -1,0 +1,25 @@
+@import 'shared/colors.scss';
+
+$custom-typography: mat-typography-config(
+  $font-family: IRANSans,
+);
+@include mat-core($custom-typography);
+
+// $app-theme: mat-light-theme($app-primary, $app-accent, $app-danger);
+// @include angular-material-theme($app-theme);
+
+// -------------- Style Overrides --------------
+
+.mat-step-header .mat-step-label {
+  flex-grow: 1;
+}
+.mat-vertical-stepper-header .mat-step-icon {
+  margin-right: 0;
+  margin-left: 12px;
+}
+.mat-step:last-child .mat-vertical-content-container {
+  margin-right: 0;
+}
+.mat-expansion-panel-content {
+  box-sizing: border-box;
+}

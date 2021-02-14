@@ -1,0 +1,30 @@
+<ng-container *ngIf="windowOptions.lgOnly; else mobileView">
+  <header id="header">
+    <div class="navbar" [class.menu-is-open]="isSidebarOpen">
+      <div class="mr-auto header-container">
+        <div class="user-holder">
+          <div class="user-info">
+            <span class="user-fullname">Navid Akbari</span>
+            <i class="icon-user"></i>
+          </div>
+          <div class="profile-dropdown">
+            <li>
+              <div class="option" (click)="logout()">Log Out</div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</ng-container>
+<ng-template #mobileView>
+  <header id="header">
+    <div class="navbar">
+      <div class="menu-collapse-btn" [class.active]="isSidebarOpen" (click)="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+</ng-template>

@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+$app-primary: /* material. */ mat-palette($mat-deep-purple);
+$app-second:  /* material. */ mat-palette($mat-indigo);
+$app-third: /* material. */ mat-palette($mat-deep-orange);
+$app-fourth:/* material. */ mat-palette($mat-amber);
+$app-accent: /* material. */ mat-palette($mat-indigo);
+$app-danger: /* material. */ mat-palette($mat-red);
+$app-warn: /* material. */ mat-palette($mat-orange);
+$app-success: /* material. */ mat-palette($mat-green);
+$app-info: /* material. */ mat-palette($mat-indigo);
+$app-deactive:  /* material. */ mat-palette($mat-grey);

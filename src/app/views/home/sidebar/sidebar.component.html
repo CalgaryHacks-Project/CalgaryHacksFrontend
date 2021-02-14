@@ -1,0 +1,59 @@
+<div class="menu-right-side" [class.active]="sidebarIsOpen">
+  <div class="menu-collapse-btn" [class.active]="sidebarIsOpen" (click)="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="sidebar-items">
+    <ng-container *ngFor="let p of sidebarItems">
+        <ng-container *ngIf="!p.mobile || (p.mobile && !windowOptions.lgOnly)">
+          <ng-container *ngIf="!p.children">
+            <a
+              class="menu-item"
+              [routerLink]="p.link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <div class="menu-item-content">
+                <i [class]="'icon-' + p.icon!" *ngIf="p.icon"></i>
+                <span class="menu-title align-self-center">{{ p.text }}</span>
+              </div>
+            </a>
+          </ng-container>
+          <ng-container *ngIf="p.children">
+            <div class="menu-item has-child" [class.active]="isDropdownOpen(p)">
+              <div class="menu-item-content" (click)="openDropdown(p)">
+                <i [class]="'icon-' + p.icon!" *ngIf="p.icon"></i>
+                <span class="menu-title">{{ p.text }}</span>
+              </div>
+              <div class="child-menu">
+                <ng-container *ngFor="let ch of p.children">
+                    <a
+                      class="menu-item"
+                      routerLinkActive="active-submenu"
+                      [routerLink]="ch.link"
+                      [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                      <div class="menu-item-content ml-5" *ngIf="sidebarIsOpen">
+                        <i [class]="'icon-' + ch.icon"></i>
+                        <span class="menu-title align-self-center">{{ ch.text }}</span>
+                      </div>
+                      <div class="menu-item-content" *ngIf="!sidebarIsOpen">
+                        <i [class]="'icon-' + ch.icon"></i>
+                        <span class="menu-title align-self-center">{{ ch.text }}</span>
+                      </div>
+                    </a>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+    </ng-container>
+    <div class="menu-item" *ngIf="!windowOptions.lgOnly">
+      <div class="menu-item-content" (click)="logout()">
+        <i class="icon-logout"></i>
+        <span class="menu-title">خروج</span>
+      </div>
+    </div>
+  </div>
+</div>

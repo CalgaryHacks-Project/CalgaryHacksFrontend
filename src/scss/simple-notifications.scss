@@ -1,0 +1,16 @@
+.simple-notification {
+  direction: ltr !important;
+  text-align: left !important;
+  .sn-title {
+    font-size: 17px !important;
+  }
+  .sn-content {
+    font-size: 14px !important;
+  }
+  &.error {
+    background: mat-color($app-warn, 800) !important;
+    .sn-progress-loader span {
+      background: mat-color($app-warn, 900) !important;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+$iransans-fonts-folder: '/assets/fonts/iransans/fonts';
+$icomoon-font-path: '/assets/fonts/icons/fonts';
+$global-font-family: IRANSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+@import './scss/shared/shared.scss';
+@import './assets/fonts/iransans/css/fontiran.scss';
+@import './assets/fonts/icons/style.css';
+@import './scss/material-config.scss';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap';
+
+$theme-colors: (
+  'primary': mat-color($app-primary, 500),
+  'secondary': mat-color($app-accent, 600),
+  'danger': mat-color($app-danger, 500),
+  'success': mat-color($app-success, 500),
+  'warning': mat-color($app-warn, 700),
+);
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/utilities';
+@import './scss/simple-notifications';
+@import './scss/loader.scss';
+@import './scss/dashboard.scss';
+
+button {
+  outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: bold !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(241, 241, 241, 0.75);
+}
+
+.simple-notification-wrapper {
+  z-index: 9999 !important;
+}
