@@ -17,6 +17,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('@app/views/setting/setting.module').then(m => m.SettingModule),
       },
+      {
+        path: 'disposal',
+        loadChildren: () =>
+          import('@app/views/disposal/disposal.module').then(m => m.DisposalModule),
+      },
     ],
   },
 ];
